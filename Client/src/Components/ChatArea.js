@@ -120,9 +120,9 @@ function ChatArea() {
           <div className={"header-text"}>
             <p className={"con-title"}>{chat_user}</p>
           </div>
-          <IconButton>
+          {/* <IconButton>
             <DeleteIcon className={"icon"} />
-          </IconButton>
+          </IconButton> */}
         </div>
         <div className={"messages-container"}>
           {allMessages
