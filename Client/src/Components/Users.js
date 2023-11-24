@@ -30,9 +30,11 @@ function Users() {
         Authorization: `Bearer ${userData.data.token}`,
       },
     };
-    axios.get("http://localhost:5000/user/fetchUsers", config).then((data) => {
-      setUsers(data.data);
-    });
+    axios
+      .get("https://mernproj-uh8p.onrender.com/user/fetchUsers", config)
+      .then((data) => {
+        setUsers(data.data);
+      });
   }, [refresh]);
 
   return (
@@ -81,7 +83,7 @@ function Users() {
                     },
                   };
                   axios.post(
-                    "http://localhost:5000/chat",
+                    "https://mernproj-uh8p.onrender.com/chat",
                     {
                       userId: user._id,
                     },

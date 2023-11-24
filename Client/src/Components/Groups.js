@@ -33,7 +33,7 @@ function Groups() {
     };
 
     axios
-      .get("http://localhost:5000/chat/fetchGroups", config)
+      .get("https://mernproj-uh8p.onrender.com/chat/fetchGroups", config)
       .then((response) => {
         SetGroups(response.data);
       });
@@ -87,7 +87,7 @@ function Groups() {
                     },
                   };
                   axios.post(
-                    "http://localhost:5000/chat/addSelfToGroup",
+                    "https://mernproj-uh8p.onrender.com/chat/addSelfToGroup",
                     {
                       chatId: group._id,
                       userId: user._id,

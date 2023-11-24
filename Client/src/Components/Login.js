@@ -30,7 +30,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/user/login",
+        "https://mernproj-uh8p.onrender.com/user/login",
         data,
         config
       );
@@ -58,7 +58,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/user/register",
+        "https://mernproj-uh8p.onrender.com/user/register",
         data,
         config
       );

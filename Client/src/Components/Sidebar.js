@@ -33,10 +33,12 @@ function Sidebar() {
       },
     };
 
-    axios.get("http://localhost:5000/chat/", config).then((response) => {
-      setConversations(response.data);
-      setRefresh(!refresh);
-    });
+    axios
+      .get("https://mernproj-uh8p.onrender.com/chat/", config)
+      .then((response) => {
+        setConversations(response.data);
+        setRefresh(!refresh);
+      });
   }, [refresh]);
 
   return (

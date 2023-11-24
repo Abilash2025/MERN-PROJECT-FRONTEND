@@ -11,7 +11,7 @@ import Skeleton from "@mui/material/Skeleton";
 import axios from "axios";
 import { myContext } from "./MainContainer";
 import io from "socket.io-client";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://mernproj-uh8p.onrender.com";
 
 var socket, chat, data;
 
@@ -35,7 +35,7 @@ function ChatArea() {
     };
     axios
       .post(
-        "http://localhost:5000/message",
+        "https://mernproj-uh8p.onrender.com/message",
         {
           content: messageContent,
           chatId: chat_id,
@@ -72,7 +72,7 @@ function ChatArea() {
       },
     };
     axios
-      .get("http://localhost:5000/message/" + chat_id, config)
+      .get("https://mernproj-uh8p.onrender.com/message/" + chat_id, config)
       .then(({ data }) => {
         setAllMessages(data);
         setloaded(true);
